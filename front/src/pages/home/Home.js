@@ -3,9 +3,11 @@ import React, { Component } from 'react';
 class Home extends Component{
 render(){
   return (
-    <div>
-      <p>Holi!! Esto es la home</p>
-    </div>
+    <section className="home">
+      <div className="belt">
+      <p>Holi!! Esto es la homehhhh</p>
+      </div>
+    </section>
   )
 }
 }

@@ -20,6 +20,7 @@ class Login extends Component {
         password: password,
         error: false
       })
+      window.location = '/home'
       this.props.getUser(response)
     })
     .catch(error => {
@@ -38,7 +39,7 @@ class Login extends Component {
 
   render(){
     return (
-      <div>
+      <div className="login">
         <h3>Login</h3>
         <form onSubmit={this.handleFormSubmit}>
           <fieldset>

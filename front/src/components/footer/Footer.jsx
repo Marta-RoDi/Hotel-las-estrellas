@@ -40,10 +40,10 @@ class Footer extends Component {
             </div>
             <ul className="footer-social-main">
               <li className="footer-social-main__item footer-social-main__item--1">
-                <a href="http://www.google.es"></a>
+                <a href="https://www.facebook.com/hotel.lasestrellas"> </a>
               </li>
               <li className="footer-social-main__item footer-social-main__item--2">
-                <a href="#"></a>
+                <a href="https://twitter.com/HLasEstrellas"> </a>
               </li>
             </ul>
           </div>

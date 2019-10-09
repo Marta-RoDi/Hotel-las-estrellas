@@ -9,9 +9,11 @@ import Navbar from "./components/navbar/Navbar";
 import Signup from "./pages/auth/Signup";
 import Login from "./pages/auth/Login";
 import AuthService from "./pages/auth/AuthService";
-import Content from "./components/contents/Content";
 import Home from "./pages/home/Home";
+import Offer from "./pages/offers/Offer";
+import Panel from "./pages/panel/Panel";
 import Footer from "./components/footer/Footer";
+
 
 
 class App extends Component {
@@ -55,14 +57,21 @@ class App extends Component {
     if(this.state.loggedInUser){
       return (
         <React.Fragment>
-          <Redirect to ="/home" />
-          <div className="App">
-            <header className="App-header">
-              <Navbar userInSession={this.state.loggedInUser} logout={this.logout}></Navbar>
-              <Content></Content>
-            </header>
-          </div>
-        </React.Fragment>
+        <Redirect to="/home"></Redirect>
+        <div className="App">
+          <header className="App-header">
+            <Navbar userInSession={this.state.loggedInUser} logout={this.logout}></Navbar>
+            <Switch>
+              <Route exac path="/home" render={() => <Home getUser={this.getUser}></Home>}></Route>
+              <Route exac path="/ofertas" render={() => <Offer getUser={this.getUser}></Offer>}></Route>
+              <Route exac path="/panel" render={() => <Panel getUser={this.getUser}></Panel>}></Route>
+            </Switch>
+          </header>
+          <footer>
+          <Footer></Footer>
+          </footer>
+        </div>
+      </React.Fragment>
       )
     }else{
       return (

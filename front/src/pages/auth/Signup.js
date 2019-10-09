@@ -21,6 +21,7 @@ class Signup extends Component {
         password: "",
         photo:""
       })
+      window.location = '/home'
       this.props.getUser(response.user)
     })
     .catch(error => {
@@ -41,9 +42,9 @@ class Signup extends Component {
 
   render(){
     return(
-      <div>
+      <div className="signup">
         <h3>Sign up</h3>
-        <form onSubmit={this.handleFormSubmit}>
+        <form onSubmit={this.handleFormSubmit} enctype="multipart/form-data">
           <fieldset>
             <label>Username:</label>
             <input type="text" name="username" value={this.state.username} onChange={e => this.handleChange(e)}></input>

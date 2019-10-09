@@ -7,6 +7,7 @@ class AuthService {
       withCredentials: true
     })
   }
+  
 
   signup = (username, password, photo) => {
     return this.service.post('/signup', {username, password, photo})
