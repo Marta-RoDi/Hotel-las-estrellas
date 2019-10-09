@@ -2,12 +2,17 @@ import React, { Component } from "react";
 import './App.css';
 import { Switch, Route, Redirect } from "react-router-dom";
 
+
+import './stylesheet/main.scss'
 //Import components
 import Navbar from "./components/navbar/Navbar";
-import Signup from "./components/auth/Signup";
-import Login from "./components/auth/Login";
-import AuthService from "./components/auth/AuthService";
+import Signup from "./pages/auth/Signup";
+import Login from "./pages/auth/Login";
+import AuthService from "./pages/auth/AuthService";
 import Content from "./components/contents/Content";
+import Home from "./pages/home/Home";
+import Footer from "./components/footer/Footer";
+
 
 class App extends Component {
   constructor(props){
@@ -62,15 +67,19 @@ class App extends Component {
     }else{
       return (
         <React.Fragment>
-        <Redirect to="/login"></Redirect>
+        <Redirect to="/home"></Redirect>
         <div className="App">
           <header className="App-header">
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout}></Navbar>
             <Switch>
               <Route exac path="/signup" render={() => <Signup getUser={this.getUser}></Signup>}></Route>
               <Route exac path="/login" render={() => <Login getUser={this.getUser}></Login>}></Route>
+              <Route exac path="/home" render={() => <Home getUser={this.getUser}></Home>}></Route>
             </Switch>
           </header>
+          <footer>
+          <Footer></Footer>
+          </footer>
         </div>
       </React.Fragment>
       )

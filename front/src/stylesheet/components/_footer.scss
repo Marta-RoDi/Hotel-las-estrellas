@@ -1,0 +1,125 @@
+.footer-container{
+  margin-top: 10rem;
+  background:$principal-color;
+  padding:0.5rem;
+}
+
+.footer{
+  display:flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.footer-left{
+  display:flex;
+  align-items: center;
+}
+
+.footer-left__logo{
+  margin-right:2rem;
+}
+
+.footer-information{
+  list-style-type: none;
+  margin-top: 0.5rem;
+}
+
+.footer-information__item{
+  font-size:1rem;
+  color:$text-color-white;
+  margin-bottom: 0.7rem;
+}
+
+.footer-information__item a{
+  color:$text-color-white;
+  cursor:pointer;
+  padding:0.4rem 0;
+}
+
+.footer-information__item:nth-child(2) a{
+  text-decoration: none;
+  pointer-events: none;
+}
+
+.footer-information__item-bold{
+  font-weight: bold;
+}
+
+.footer-social-main{
+  display:flex;
+}
+
+.footer-social-main__item a{
+  cursor:pointer;
+}
+
+.footer-social-main__item a:after{
+  content: "";
+  display: block;
+  width:35px;
+  height:30px;
+  background:url("https://res.cloudinary.com/dr71uffjo/image/upload/v1570545233/fb_uidadg.png")
+}
+
+.footer-social-main__item a:hover:after{
+  content:"";
+  background:url("https://res.cloudinary.com/dr71uffjo/image/upload/v1570545565/fb-hover_rsphwc.png")
+}
+
+.footer-social-main__item.footer-social-main__item--2 a:after{
+  content: "";
+  background:url("https://res.cloudinary.com/dr71uffjo/image/upload/v1570545391/tw_m0utm5.png")
+}
+
+.footer-social-main__item.footer-social-main__item--2 a:hover:after{
+  content:"";
+  background:url("https://res.cloudinary.com/dr71uffjo/image/upload/v1570545818/tw-hover_fbgoac.png")
+}
+
+@media screen and (max-width:800px) {
+
+  .footer{
+    align-items: flex-end;
+  }
+
+  .footer-left{
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .footer-left__logo{
+    margin:0.4rem 0 0.5rem 0;
+  }
+
+  .footer-information__item{
+    font-size:0.8rem;
+  }
+
+  .footer-information__item:nth-child(2) a{
+    pointer-events: inherit;
+  }
+}
+
+@media screen and (max-width:500px) {
+
+
+  .footer{
+    justify-content: center;
+  }
+
+  .footer-left{
+    align-items: center;
+  }
+
+  .footer-information{
+    text-align: center;
+  }
+
+  .footer-information__item{
+    line-height: 1rem;
+  }
+
+  .footer-social-main{
+    display: none;
+  }
+}
