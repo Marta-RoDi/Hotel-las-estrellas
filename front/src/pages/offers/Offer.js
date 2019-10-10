@@ -24,15 +24,15 @@ class Offer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="offer">
         <p>{this.state.title}</p>
             {this.state.offers.map((oneOffer, idx) => {
               return <div key={idx}>
-                <p>Tagline: {oneOffer.title}</p>
+                <p>Título: {oneOffer.title}</p>
+                <p>Descripción: {oneOffer.description}</p>
+                <p>Código: {oneOffer.code}</p>
                 </div>
             })}
-
-            holiiiiiiii
           </div>
     )
 }

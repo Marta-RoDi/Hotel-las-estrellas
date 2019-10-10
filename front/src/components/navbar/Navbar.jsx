@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import AuthService from "../../pages/auth/AuthService";
 
 class Navbar extends Component {
@@ -29,6 +30,16 @@ class Navbar extends Component {
     });
   }
 
+  closeMenu() {
+    if(window.innerWidth < 800){
+      this.setState({
+        opened: !this.state.opened
+      });
+    } 
+  }
+
+
+
   render() {
     if (this.state.loggedInUser && this.state.loggedInUser.username === "admin") {
       return (
@@ -54,11 +65,11 @@ class Navbar extends Component {
             <div className="belt">
               <div className="navbar-container">
                 <div className="navbar-left">
-                  <img
+                <Link to="/home"> <img
                     className="navbar-left__logo"
                     src="https://res.cloudinary.com/dr71uffjo/image/upload/v1570605677/logo_nxxrou.png"
                     alt="Hotel Las Estrellas"
-                  />
+                  /></Link>
                   <div className="container" onClick={this.toggle.bind(this)}>
                     <div
                       className={
@@ -89,28 +100,28 @@ class Navbar extends Component {
                   }
                 >
                   <li className="navbar-main__item">
-                    <NavLink to="/home">Home</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)}  to="/home">Home</NavLink>
+                  </li>
+                  <li  className="navbar-main__item">
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/hotel">Hotel</NavLink>
                   </li>
                   <li className="navbar-main__item">
-                    <NavLink to="/hotel">Hotel</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/galeria">Galería</NavLink>
                   </li>
                   <li className="navbar-main__item">
-                    <NavLink to="/galeria">Galería</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/reservas">Reservas</NavLink>
                   </li>
                   <li className="navbar-main__item">
-                    <NavLink to="/reservas">Reservas</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/contacto">Contacto</NavLink>
                   </li>
                   <li className="navbar-main__item">
-                    <NavLink to="/contacto">Contacto</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/experiencias">Experiencias</NavLink>
                   </li>
                   <li className="navbar-main__item">
-                    <NavLink to="/experiencias">Experiencias</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/ofertas">Ofertas</NavLink>
                   </li>
                   <li className="navbar-main__item">
-                    <NavLink to="/ofertas">Ofertas</NavLink>
-                  </li>
-                  <li className="navbar-main__item">
-                    <NavLink to="/panel">Panel</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/panel">Panel</NavLink>
                   </li>
                   <li className="navbar-main__item">
                     <a href="#logout" onClick={this.handleLogout}>Logout</a>
@@ -147,11 +158,11 @@ class Navbar extends Component {
             <div className="belt">
               <div className="navbar-container">
                 <div className="navbar-left">
-                  <img
+                <Link to="/home"><img
                     className="navbar-left__logo"
                     src="https://res.cloudinary.com/dr71uffjo/image/upload/v1570605677/logo_nxxrou.png"
                     alt="Hotel Las Estrellas"
-                  />
+                  /></Link>
                   <div className="container" onClick={this.toggle.bind(this)}>
                     <div
                       className={
@@ -182,25 +193,25 @@ class Navbar extends Component {
                   }
                 >
                   <li className="navbar-main__item">
-                    <NavLink to="/home">Home</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/home">Home</NavLink>
                   </li>
                   <li className="navbar-main__item">
-                    <NavLink to="/hotel">Hotel</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/hotel">Hotel</NavLink>
                   </li>
                   <li className="navbar-main__item">
-                    <NavLink to="/galeria">Galería</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/galeria">Galería</NavLink>
                   </li>
                   <li className="navbar-main__item">
-                    <NavLink to="/reservas">Reservas</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/reservas">Reservas</NavLink>
                   </li>
                   <li className="navbar-main__item">
-                    <NavLink to="/contacto">Contacto</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/contacto">Contacto</NavLink>
                   </li>
                   <li className="navbar-main__item">
-                    <NavLink to="/experiencias">Experiencias</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/experiencias">Experiencias</NavLink>
                   </li>
                   <li className="navbar-main__item">
-                    <NavLink to="/ofertas">Ofertas</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/ofertas">Ofertas</NavLink>
                   </li>
                   <li className="navbar-main__item">
                     <a href="#logout" onClick={this.handleLogout}>Logout</a>
@@ -237,11 +248,11 @@ class Navbar extends Component {
             <div className="belt">
               <div className="navbar-container">
                 <div className="navbar-left">
-                  <img
+                <Link to="/home"><img
                     className="navbar-left__logo"
                     src="https://res.cloudinary.com/dr71uffjo/image/upload/v1570605677/logo_nxxrou.png"
                     alt="Hotel Las Estrellas"
-                  />
+                  /></Link>
                   <div className="container" onClick={this.toggle.bind(this)}>
                     <div
                       className={
@@ -272,25 +283,25 @@ class Navbar extends Component {
                   }
                 >
                   <li className="navbar-main__item">
-                    <NavLink to="/home">Home</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/home">Home</NavLink>
                   </li>
                   <li className="navbar-main__item">
-                    <NavLink to="/hotel">Hotel</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/hotel">Hotel</NavLink>
                   </li>
                   <li className="navbar-main__item">
-                    <NavLink to="/galeria">Galería</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/galeria">Galería</NavLink>
                   </li>
                   <li className="navbar-main__item">
-                    <NavLink to="/reservas">Reservas</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/reservas">Reservas</NavLink>
                   </li>
                   <li className="navbar-main__item">
-                    <NavLink to="/contacto">Contacto</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/contacto">Contacto</NavLink>
                   </li>
                   <li className="navbar-main__item">
-                    <NavLink to="/signup">Sign up</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/signup">Sign up</NavLink>
                   </li>
                   <li className="navbar-main__item">
-                    <NavLink to="/login">Login</NavLink>
+                    <NavLink onClick={this.closeMenu.bind(this)} to="/login">Login</NavLink>
                   </li>
                 </ul>
               </div>
