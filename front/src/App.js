@@ -12,6 +12,7 @@ import AuthService from "./pages/auth/AuthService";
 import Home from "./pages/home/Home";
 import Offer from "./pages/offers/Offer";
 import Panel from "./pages/panel/Panel";
+import Booking from "./pages/booking/Booking";
 import GalleryPhoto from "./pages/gallery/GalleryPhoto";
 import Footer from "./components/footer/Footer";
 
@@ -64,6 +65,7 @@ class App extends Component {
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout}></Navbar>
             <Switch>
               <Route exac path="/home" render={() => <Home getUser={this.getUser}></Home>}></Route>
+              <Route exac path="/reservas" render={() => <Booking getUser={this.getUser}></Booking>}></Route>
               <Route exac path="/galeria" render={() => <GalleryPhoto getUser={this.getUser}></GalleryPhoto>}></Route>
               <Route exac path="/ofertas" render={() => <Offer getUser={this.getUser}></Offer>}></Route>
               <Route exac path="/panel" render={() => <Panel getUser={this.getUser}></Panel>}></Route>
@@ -84,10 +86,10 @@ class App extends Component {
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout}></Navbar>
             <Switch>
               <Route exac path="/home" render={() => <Home getUser={this.getUser}></Home>}></Route>
+              <Route exac path="/reservas" render={() => <Booking getUser={this.getUser}></Booking>}></Route>
               <Route exac path="/galeria" render={() => <GalleryPhoto getUser={this.getUser}></GalleryPhoto>}></Route>
               <Route exac path="/signup" render={() => <Signup getUser={this.getUser}></Signup>}></Route>
               <Route exac path="/login" render={() => <Login getUser={this.getUser}></Login>}></Route>
-              <Route exac path="/home" render={() => <Home getUser={this.getUser}></Home>}></Route>
             </Switch>
           </header>
           <footer>
