@@ -90,6 +90,9 @@ app.use('/auth', authRoutes);
 
 const offersRoutes = require('./routes/offers');
 app.use('/offers', offersRoutes);
+
+const contactRoutes = require('./routes/contact');
+app.use('/contact', contactRoutes);
       
 
 module.exports = app;

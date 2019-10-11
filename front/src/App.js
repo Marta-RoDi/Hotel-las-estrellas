@@ -13,6 +13,7 @@ import Home from "./pages/home/Home";
 import Offer from "./pages/offers/Offer";
 import Panel from "./pages/panel/Panel";
 import Booking from "./pages/booking/Booking";
+import Contact from "./pages/contact/Contact";
 import GalleryPhoto from "./pages/gallery/GalleryPhoto";
 import Footer from "./components/footer/Footer";
 
@@ -69,6 +70,7 @@ class App extends Component {
               <Route exac path="/galeria" render={() => <GalleryPhoto getUser={this.getUser}></GalleryPhoto>}></Route>
               <Route exac path="/ofertas" render={() => <Offer getUser={this.getUser}></Offer>}></Route>
               <Route exac path="/panel" render={() => <Panel getUser={this.getUser}></Panel>}></Route>
+              <Route exac path="/contacto" render={() => <Contact getUser={this.getUser}></Contact>}></Route>
             </Switch>
           </header>
           <footer>
@@ -88,6 +90,7 @@ class App extends Component {
               <Route exac path="/home" render={() => <Home getUser={this.getUser}></Home>}></Route>
               <Route exac path="/reservas" render={() => <Booking getUser={this.getUser}></Booking>}></Route>
               <Route exac path="/galeria" render={() => <GalleryPhoto getUser={this.getUser}></GalleryPhoto>}></Route>
+              <Route exac path="/contacto" render={() => <Contact getUser={this.getUser}></Contact>}></Route>
               <Route exac path="/signup" render={() => <Signup getUser={this.getUser}></Signup>}></Route>
               <Route exac path="/login" render={() => <Login getUser={this.getUser}></Login>}></Route>
             </Switch>

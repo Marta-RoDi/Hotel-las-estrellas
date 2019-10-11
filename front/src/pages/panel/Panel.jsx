@@ -39,10 +39,11 @@ class Panel extends Component {
         title: "",
         description: "",
         code: ""
-      })
+      })  
     })
     .then(() => {
       return  alert("Oferta creada con éxito :)")
+      
      })
   }
 
