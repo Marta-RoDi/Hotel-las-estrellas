@@ -1,0 +1,85 @@
+.modal{
+  position: absolute;
+  background: $secundary-color;
+  opacity:0.8;
+  border-radius:5px;
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  right: 17%;
+  top: 38%;
+  z-index: 3;
+  animation: 1s fadeIn forwards;
+}
+
+.modal-container{
+  position: relative;
+}
+
+.modal-text{
+  color:$text-color-white;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.modal-button {
+  background: none;
+  border: none;
+  color: #FFF;
+  font-size: 1rem;
+  position: absolute;
+  top: -16px;
+  right: -16px;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.close-pop-up{
+  //animation: 4s fadeOut forwards;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
