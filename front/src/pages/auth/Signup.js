@@ -44,7 +44,7 @@ class Signup extends Component {
     return(
       <div className="signup">
         <h3>Sign up</h3>
-        <form onSubmit={this.handleFormSubmit} enctype="multipart/form-data">
+        <form onSubmit={this.handleFormSubmit} content-type="multipart/form-data">
           <fieldset>
             <label>Username:</label>
             <input type="text" name="username" value={this.state.username} onChange={e => this.handleChange(e)}></input>
@@ -55,7 +55,7 @@ class Signup extends Component {
           </fieldset>
           <fieldset>
             <label>Photo:</label>
-            <input type="file" name="userPhoto" id="user-photo" value={this.state.photo} onChange={e => this.handleChange(e)}></input>
+            <input type="file" name="photo" id="user-photo" value={this.state.photo} onChange={e => this.handleChange(e)}></input>
           </fieldset>
           <input type="submit" value="Sign up"></input>
         </form>

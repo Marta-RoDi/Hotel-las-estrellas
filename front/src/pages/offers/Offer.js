@@ -18,7 +18,6 @@ class Offer extends Component {
       this.setState({
        offers: response
       })
-      console.log(response)
     })
   }
 

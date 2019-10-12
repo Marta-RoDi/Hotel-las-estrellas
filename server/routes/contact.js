@@ -16,21 +16,6 @@ var transport = {
 
 var transporter = nodemailer.createTransport(transport)
 
-/* var smtpTransport = require('nodemailer-smtp-transport');
-
-var transporter = nodemailer.createTransport(smtpTransport({
-  service: 'gmail',
-  host: 'smtp.gmail.com',
-  auth: {
-    Username: 'hotelasestrellas19@gmail.com',
-    Password: 'ciempo73)'
-  }
-}));
-*/
-
-
-
-
 
 transporter.verify((error, success) => {
   if (error) {
