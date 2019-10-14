@@ -198,6 +198,10 @@
   right: 17%;
   width: 25%;
 }
+
+.modal{
+  right: 4%;
+}
 }
 
 @media screen and (max-width:800px) {
@@ -210,6 +214,10 @@
     width: 40%;
     top: 24%;
     left: 6%;
+}
+
+.modal{
+  width:45%;
 }
 }
 
@@ -225,5 +233,9 @@
     width: 44%;
     top: 39%;
     left: 6%;
+}
+
+.modal-text{
+  line-height: 1.2rem;
 }
 }

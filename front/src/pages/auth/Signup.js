@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AuthService from './AuthService'
+import Button from '../../components/button/Button'
 
 class Signup extends Component {
   constructor(props){
@@ -42,24 +43,30 @@ class Signup extends Component {
 
   render(){
     return(
+      <div className="signup-container">
+      <div className="signup-box-container">
+      <div className="signup-picture"></div>
       <div className="signup">
-        <h3>Sign up</h3>
-        <form onSubmit={this.handleFormSubmit} content-type="multipart/form-data">
+        <h3 className="signup-title">Registrarse</h3>
+        <form className="signup-form"  onSubmit={this.handleFormSubmit} content-type="multipart/form-data">
           <fieldset>
-            <label>Username:</label>
-            <input type="text" name="username" value={this.state.username} onChange={e => this.handleChange(e)}></input>
+            {/* <label>Username:</label> */}
+            <input className="signup-form__input" placeholder="Usuario" type="text" name="username" value={this.state.username} onChange={e => this.handleChange(e)}></input>
           </fieldset>
           <fieldset>
-            <label>Password:</label>
-            <input type="password" name="password" value={this.state.password} onChange={e => this.handleChange(e)}></input>
+            {/* <label>Password:</label> */}
+            <input className="signup-form__input" placeholder="Contraseña" type="password" name="password" value={this.state.password} onChange={e => this.handleChange(e)}></input>
           </fieldset>
-          <fieldset>
+          {/* <fieldset>
             <label>Photo:</label>
             <input type="file" name="photo" id="user-photo" value={this.state.photo} onChange={e => this.handleChange(e)}></input>
-          </fieldset>
-          <input type="submit" value="Sign up"></input>
+          </fieldset> */}
+          {/* <input type="submit" value="Sign up"></input> */}
+          <Button className="signup-button" text="Registrarse" value="signup"></Button>
         </form>
-        <p>{this.state.error ? 'Error' : ''}</p>
+        <p>{this.state.error ? 'Ha ocurrido un error, revise los campos.' : ''}</p>
+      </div>
+      </div>
       </div>
     )
   }

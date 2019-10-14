@@ -1,11 +1,93 @@
 .booking{
-  padding-top:10rem;
+  padding:14rem 2rem 4rem;
+  text-align: center;
 }
 
-.widget_redforts_com{
-  margin:3rem 0;
+.booking-text{
+  font-size: 1rem;
+  color:$text-color-dark;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.widget_redforts_com input{
-  border:1px solid #333333;
+.booking a{
+  text-decoration: none;
+  cursor:pointer;
+}
+
+.booking-button{
+  border: 1px solid $secundary-color;
+  padding: 0.7rem 1rem;
+  background: #FFF;
+  color: $secundary-color;;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  margin-top: 1.1rem;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  cursor:pointer;
+  width: 20rem;
+  text-decoration: none;
+  display: block;
+  margin:0 auto 2rem;
+}
+
+
+.booking-button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $secundary-color;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.booking-button:hover, .booking-button:focus, .booking-button:active {
+  color: white;
+}
+.booking-button:hover:before, .booking-button:focus:before, .booking-button:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.booking-image{
+  width: 400px;
+  margin-right: 1%;
+}
+
+@media screen and (max-width:600px) {
+
+  .booking {
+    padding: 12rem 2rem 2rem;
+}
+
+  .booking-image {
+    width: 85%;
+  }
+
+  .booking-text {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  }
+
+  .booking-button{
+    width: 100%;
+  }
 }
