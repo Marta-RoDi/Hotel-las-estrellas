@@ -1,7 +1,8 @@
 const mongoose = require("mongoose")
+require('dotenv').config();
 
 mongoose
-  .connect('mongodb://localhost/server', {useNewUrlParser: true})
+  .connect(`${process.env.MONGODB}`, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })

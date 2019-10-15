@@ -8,8 +8,8 @@ var transport = {
    service: 'Gmail',
     secure: true,
     auth: {
-        user: 'hotellasestrellas1989@gmail.com',
-        pass: 'ciempo73)'
+        user: `${process.env.GMAIL_EMAIL}`,
+        pass: `${process.env.GMAIL_PASS}`
     }
   }
 
