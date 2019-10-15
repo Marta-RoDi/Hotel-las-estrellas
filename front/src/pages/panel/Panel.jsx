@@ -56,18 +56,27 @@ class Panel extends Component {
     return (
       <div className="panel">
         <div className="belt">
-        <div>
-          <form>
-            <input name="title" type="text" value={this.state.title} onChange={e => this.handleChange(e)}></input>
-            <textarea name="description" type="text" value={this.state.description} onChange={e => this.handleChange(e)}></textarea>
-            <input name="code" type="text" value={this.state.code} onChange={e => this.handleChange(e)}></input>
-            <Link to="/panel"><button onClick={() => this.addNewOffer()}>Añadir oferta</button></Link>
+        <div className="panel-form__container">
+          <h3 className="panel-form__container__title">Crea una nueva oferta</h3>
+          <form className="panel-form">
+            <div className="panel-form__fields">
+            <div className="panel-form__left">
+            <input placeholder="Título de la oferta" className="panel-form__input" name="title" type="text" value={this.state.title} onChange={e => this.handleChange(e)}></input>
+            <input placeholder="Código de la oferta" className="panel-form__input" name="code" type="text" value={this.state.code} onChange={e => this.handleChange(e)}></input>
+            </div>
+            <div className="panel-form__right">
+            <textarea placeholder="Descripción de la oferta" className="panel-form__textarea" name="description" type="text" value={this.state.description} onChange={e => this.handleChange(e)}></textarea>
+            </div>
+            </div>
+            <Link to="/panel"><button className="panel-form__button" onClick={() => this.addNewOffer()}>Añadir oferta</button></Link>
+            
           </form>
         </div>
-        <div className="offer">
+        <h3 className="panel-form__offer__title">Ofertas activas</h3>
+        <ul className="offer">
         {this.state.offers.map((oneOffer, idx) => {
           return (
-            <div className="offer-container" key={idx}>
+            <li className="offer-container" key={idx}>
               <p className="offer-container__title">{oneOffer.title}</p>
               <p className="offer-container__description">{oneOffer.description}</p>
               <p className="offer-container__code"><sup>*</sup>Código de descuento <span className="offer-container__code--bold">{oneOffer.code}</span></p>
@@ -79,10 +88,10 @@ class Panel extends Component {
               >
                 Eliminar esta oferta
               </button>
-            </div>
+            </li>
           );
         })}
-        </div>
+        </ul>
       </div>
       </div>
     );

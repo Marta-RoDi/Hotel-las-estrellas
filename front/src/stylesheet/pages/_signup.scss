@@ -64,19 +64,23 @@
   color:#333333;
 }
 
-input::-webkit-input-placeholder {
+input::-webkit-input-placeholder,
+textarea::-webkit-textarea-placeholder {
   color: $secundary-color !important;
   }
    
-  input:-moz-placeholder { /* Firefox 18- */
+  input:-moz-placeholder,
+  textarea:-moz-placeholder { /* Firefox 18- */
   color: $secundary-color !important;  
   }
    
-  input::-moz-placeholder {  /* Firefox 19+ */
+  input::-moz-placeholder,
+  textarea::-moz-placeholder {  /* Firefox 19+ */
   color: $secundary-color !important;  
   }
    
-  input:-ms-input-placeholder {  
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholder {  
   color: $secundary-color !important;  
   }
 

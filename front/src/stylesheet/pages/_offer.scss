@@ -46,3 +46,25 @@
   color:$text-color-dark;
   line-height: 1rem;
 }
+
+@media screen and (max-width:1024px) {
+  .offer-container{
+    width: 45%;
+  }
+
+  .offer-container__description{
+    min-height: 0;
+    margin-bottom: 2rem;
+
+  }
+}
+
+@media screen and (max-width:768px) {
+  .offer{
+    padding: 12rem 0 1rem;
+  }
+
+  .offer-container{
+    width: 100%;
+  }
+}

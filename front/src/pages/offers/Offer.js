@@ -23,18 +23,18 @@ class Offer extends Component {
   render() {
     return (
       <div className="belt">
-      <div className="offer">
+      <ul className="offer">
           {this.state.offers.map((oneOffer, idx) => {
             return (
-              <div className="offer-container" key={idx}>
+              <li className="offer-container" key={idx}>
                 <p className="offer-container__title">{oneOffer.title}</p>
                 <p className="offer-container__description">{oneOffer.description}</p>
                 <p className="offer-container__code"><sup>*</sup>Código de descuento <span className="offer-container__code--bold">{oneOffer.code}</span></p>
                 <p className="offer-container__legal"><sup>*</sup>Copia este código y pégalo en el proceso de reserva en la parte de código promocional.</p>
-              </div>
+              </li>
             );
           })}
-        </div>
+        </ul>
         </div>
     );
   }
