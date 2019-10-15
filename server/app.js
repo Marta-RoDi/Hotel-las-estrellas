@@ -95,4 +95,5 @@ const contactRoutes = require('./routes/contact');
 app.use('/contact', contactRoutes);
       
 
+app.use((req, res) => {     res.sendFile(__dirname + "/public/index.html");    })
 module.exports = app;
