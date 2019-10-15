@@ -10,7 +10,8 @@ class Panel extends Component {
       offers: [],
       title: "",
       description: "",
-      code: ""
+      code: "",
+      message: ""
     };
 
     this.service = new OfferService();
@@ -42,9 +43,22 @@ class Panel extends Component {
       })  
     })
     .then(() => {
-      return  alert("Oferta creada con éxito :)")
-      
+      this.setState({
+        ...this.state,
+        message: "Oferta creada satisfactoriamente"
+      })
+      setTimeout(() => {
+        this.setState({
+          ...this.state,
+          message: ""
+        })
+      }, 4000);
      })
+     .catch(() => {
+      this.setState({
+        message: "No ha sido posible crear la oferta"
+      })
+    })
   }
 
   handleChange = (event) => {
@@ -69,8 +83,10 @@ class Panel extends Component {
             </div>
             </div>
             <Link to="/panel"><button className="panel-form__button" onClick={() => this.addNewOffer()}>Añadir oferta</button></Link>
-            
           </form>
+          {this.state.message && (
+            <p className="panel-alert">{this.state.message}</p>
+          )}
         </div>
         <h3 className="panel-form__offer__title">Ofertas activas</h3>
         <ul className="offer">

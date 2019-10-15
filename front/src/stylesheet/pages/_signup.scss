@@ -133,6 +133,13 @@ textarea::-webkit-textarea-placeholder {
     transform: scaleX(1);
   }
 
+  .signup-error{
+    font-size: 1rem;
+    text-align:center;
+    color:red;
+    margin-top: 1rem;
+  }
+
   @media screen and (max-width:1024px) {
     .signup-container{
       padding:14rem 1rem 4rem;

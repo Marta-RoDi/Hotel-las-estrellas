@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .panel-form__container__title {
@@ -195,9 +196,49 @@ textarea::placeholder {
   transform: scaleX(1);
 }
 
+.panel-alert{
+  background: $principal-color;
+  color:$text-color-white;
+  text-align:center;
+  position:absolute;
+  bottom:1%;
+  padding: 0.5rem;
+  border-radius:5px;
+  width: 30%;
+  animation: 1s fadeIn forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
 @media screen and (max-width:1024px) {
   .panel-form {
     width: 80%;
+  }
+  .panel-alert{
+    width:50%;
   }
 }
 
@@ -255,4 +296,10 @@ textarea::placeholder {
     width: 100%;
     left: 0;
   }
+
+  .panel-alert {
+    width: 100%;
+    position: static;
+    margin-top: 1rem;
+}
 }

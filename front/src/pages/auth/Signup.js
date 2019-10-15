@@ -64,7 +64,7 @@ class Signup extends Component {
           {/* <input type="submit" value="Sign up"></input> */}
           <Button className="signup-button" text="Registrarse" value="signup"></Button>
         </form>
-        <p>{this.state.error ? 'Ha ocurrido un error, revise los campos.' : ''}</p>
+        <p className="signup-error">{this.state.error ? 'Ha ocurrido un error, revise los campos.' : ''}</p>
       </div>
       </div>
       </div>
