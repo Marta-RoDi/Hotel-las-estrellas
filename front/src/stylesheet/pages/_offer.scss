@@ -1,3 +1,48 @@
 .offer{
-  padding-top:10rem;
+  padding: 14rem 0 3rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.offer-container{
+  width: 30%;
+  border:2px solid $secundary-color;
+  padding:2rem;
+  margin-bottom: 2rem;
+}
+
+.offer-container__title{
+  font-size: 1.3rem;
+  font-weight:bold;
+  margin-bottom: 1rem;
+  background:$secundary-color;
+  color:$text-color-white;
+  padding:0.4rem;
+  text-align: center;
+}
+
+.offer-container__description{
+  font-size: 1rem;
+  line-height: 1.2rem;
+  margin-bottom: 1rem;
+  min-height: 16rem;
+  color:$text-color-dark;
+}
+
+.offer-container__code{
+  font-size: 1rem;
+  color:$text-color-dark;
+  margin-bottom: 0.4rem;
+}
+
+.offer-container__code--bold{
+  font-weight: bold;
+  color:$principal-color;
+}
+
+.offer-container__legal{
+  font-size: 0.8rem;
+  color:$text-color-dark;
+  line-height: 1rem;
 }

@@ -55,6 +55,7 @@ class Panel extends Component {
   render() {
     return (
       <div className="panel">
+        <div className="belt">
         <div>
           <form>
             <input name="title" type="text" value={this.state.title} onChange={e => this.handleChange(e)}></input>
@@ -63,24 +64,26 @@ class Panel extends Component {
             <Link to="/panel"><button onClick={() => this.addNewOffer()}>Añadir oferta</button></Link>
           </form>
         </div>
-        <div>
+        <div className="offer">
         {this.state.offers.map((oneOffer, idx) => {
           return (
-            <div key={idx}>
-              <p>Título: {oneOffer.title}</p>
-              <p>Descripción: {oneOffer.description}</p>
-              <p>Código: {oneOffer.code}</p>
-              <button
+            <div className="offer-container" key={idx}>
+              <p className="offer-container__title">{oneOffer.title}</p>
+              <p className="offer-container__description">{oneOffer.description}</p>
+              <p className="offer-container__code"><sup>*</sup>Código de descuento <span className="offer-container__code--bold">{oneOffer.code}</span></p>
+                <p className="offer-container__legal"><sup>*</sup>Copia este código y pégalo en el proceso de reserva en la parte de código promocional.</p>
+              <button className="panel-delete"
                 onClick={() => {
                   this.deleteOffer(oneOffer._id);
                 }}
               >
-                Delete
+                Eliminar esta oferta
               </button>
             </div>
           );
         })}
         </div>
+      </div>
       </div>
     );
   }
