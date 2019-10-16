@@ -205,26 +205,42 @@ textarea::placeholder {
   padding: 0.5rem;
   border-radius:5px;
   width: 30%;
-  animation: 1s fadeIn forwards;
+  animation: 4s fadeIn forwards;
 }
 
 @-webkit-keyframes fadeIn {
-  from {
+  0% {
     opacity: 0;
   }
 
-  to {
+  50% {
     opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
 
 @keyframes fadeIn {
-  from {
+  0% {
     opacity: 0;
   }
 
-  to {
+  50% {
     opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
 
