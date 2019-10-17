@@ -1,8 +1,9 @@
 .contact{
   padding-top:14rem;
-  padding-bottom: 14rem;
+  padding-bottom: 3rem;
   display:flex;
   justify-content: center;
+  align-items: center;
 }
 
 .contact-form__container__title{
@@ -193,10 +194,96 @@
   }
 }
 
+
+.information{
+  margin-left:2rem;
+}
+
+.information-item{
+  margin-bottom: 2rem;
+
+  &__title{
+    font-size: 1.1rem;
+    font-weight:bold;
+    color:$secundary-color;
+    margin-bottom: 0.5rem;
+  }
+
+  &__text{
+    font-size: 1rem;
+    color:$principal-color;
+    line-height: 1.2rem;
+  }
+
+  &__text--go{
+    color:$principal-color;
+  }
+}
+
+
+.map-container {
+  margin-bottom: 5rem;
+  width: 60%;
+  height: 500px;
+  position: relative;
+  left: 20%;
+}
+
+.map-text{
+  color:$secundary-color;
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.map-go{
+  color:$principal-color;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width:1024px) {
+  .map-container {
+    width: 80%;
+    left: 10%;
+}
+}
+
+
 @media screen and (max-width:768px) {
 
   .contact {
     padding-top: 12rem;
+    padding-bottom: 0rem;
+  }
+
+  .contact-form__container {
+    width: 100%;
+  }
+
+  .map-container {
+    width: 100%;
+    left: 0;
+    height:300px;
+    margin-bottom: 2rem;
+}
+}
+
+@media screen and (max-width:600px) {
+
+  .contact{
+    flex-direction: column;
+  }
+
+  .information {
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+
+  .information-container {
+    width: 100%;
+  }
+
+  .contact-form__container__title{
+    line-height: 1.5rem;
   }
 }
 

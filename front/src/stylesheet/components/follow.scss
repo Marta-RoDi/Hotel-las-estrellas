@@ -52,3 +52,11 @@
   right: 0;
   top: 25%;
 }
+
+
+@media screen and (max-width:768px) {
+
+.follow {
+ display:none;
+}
+}
