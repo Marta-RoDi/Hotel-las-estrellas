@@ -17,6 +17,7 @@ import Contact from "./pages/contact/Contact";
 import GalleryPhoto from "./pages/gallery/GalleryPhoto";
 import Hotel from "./pages/hotel/Hotel";
 import Footer from "./components/footer/Footer";
+import Follow from "./components/follow/Follow";
 
 
 
@@ -74,6 +75,7 @@ class App extends Component {
               <Route exac path="/panel" render={() => <Panel getUser={this.getUser}></Panel>}></Route>
               <Route exac path="/contacto" render={() => <Contact getUser={this.getUser}></Contact>}></Route>
             </Switch>
+            <Follow></Follow>
           </header>
           <footer>
           <Footer></Footer>
