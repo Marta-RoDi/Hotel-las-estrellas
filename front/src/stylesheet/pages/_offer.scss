@@ -47,13 +47,19 @@
   line-height: 1rem;
 }
 
+.offer-container__share{
+  font-size:1rem;
+  margin-top:1rem;
+  color:$secundary-color;
+}
+
 @media screen and (max-width:1024px) {
   .offer-container{
     width: 45%;
   }
 
   .offer-container__description{
-    min-height: 0;
+    min-height: 10rem;
     margin-bottom: 2rem;
 
   }
@@ -66,5 +72,9 @@
 
   .offer-container{
     width: 100%;
+  }
+
+  .offer-container__description{
+    min-height: 0;
   }
 }

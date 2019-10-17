@@ -4,7 +4,10 @@ import Modal from "../../components/modal/Modal";
 class Home extends Component {
   constructor(props){  
     super(props);  
-    this.state = { showPopup: true };  
+    this.state = { 
+      showPopup: true,
+      urlImage: "https://res.cloudinary.com/dr71uffjo/image/upload/v1570898096/logo-home_xl1c9k.png"
+     };  
     }  
     
       togglePopup() {  
@@ -12,15 +15,26 @@ class Home extends Component {
          showPopup: !this.state.showPopup  
     });  
      } 
+
+     componentDidMount(){
+      setTimeout(() => {
+        this.setState({
+          ...this.state,
+          urlImage: ""
+        });
+      }, 2000);
+     }
+
+
   render() {
     return (
       <section className="home">
         <div className="home-grey">
-          <img
+        { <img
             className="home-grey__logo"
-            src="https://res.cloudinary.com/dr71uffjo/image/upload/v1570898096/logo-home_xl1c9k.png"
-          ></img>
-        </div>
+            src={this.state.urlImage}
+          ></img>}
+          </div>
         <div className="belt">
           <img
             className="home-bg"

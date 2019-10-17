@@ -7,7 +7,7 @@
   right: 17%;
   top: 38%;
   z-index: 3;
-  animation: 1s fadeIn forwards;
+  animation: 1s fadeInModal forwards;
 }
 
 .modal-container{
@@ -30,7 +30,7 @@
   right: -16px;
 }
 
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes fadeInModal {
   from {
     opacity: 0;
   }
@@ -40,7 +40,7 @@
   }
 }
 
-@keyframes fadeIn {
+@keyframes fadeInModal {
   from {
     opacity: 0;
   }
@@ -50,7 +50,7 @@
   }
 }
 
-.fadeIn {
+.fadeInModal {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }

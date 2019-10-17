@@ -47,7 +47,6 @@ export class MapGoogle extends Component {
           initialCenter={{ lat: 40.158998, lng: -3.619303 }}
           zoomControl={true}
           mapTypeControl={false}
-          mapTypeControl={false}
           
         >
           <Marker

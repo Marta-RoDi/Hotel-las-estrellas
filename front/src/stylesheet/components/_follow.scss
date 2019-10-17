@@ -13,6 +13,7 @@
   writing-mode: vertical-lr;
   letter-spacing: 0.1rem;
   font-weight: bold;
+  cursor: pointer;
 
   &__a{
     transition: all .2s ease-in-out;
@@ -41,14 +42,14 @@
 
 .absolut{
   position: absolute;
-  z-index: 3;
+  z-index: 1;
   right: 0;
   top: 65%;
 }
 
 .fixed{
   position: fixed;
-  z-index: 3;
+  z-index: 1;
   right: 0;
   top: 25%;
 }

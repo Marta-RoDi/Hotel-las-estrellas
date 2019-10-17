@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Parallax } from 'rc-scroll-anim';
 
 class Follow extends Component{
 

@@ -114,9 +114,9 @@ class Navbar extends Component {
                   <li className="navbar-main__item">
                     <NavLink onClick={this.closeMenu.bind(this)} to="/contacto">Contacto</NavLink>
                   </li>
-                  <li className="navbar-main__item">
+                 {/*  <li className="navbar-main__item">
                     <NavLink onClick={this.closeMenu.bind(this)} to="/experiencias">Experiencias</NavLink>
-                  </li>
+                  </li> */}
                   <li className="navbar-main__item">
                     <NavLink onClick={this.closeMenu.bind(this)} to="/ofertas">Ofertas</NavLink>
                   </li>
@@ -207,9 +207,9 @@ class Navbar extends Component {
                   <li className="navbar-main__item">
                     <NavLink onClick={this.closeMenu.bind(this)} to="/contacto">Contacto</NavLink>
                   </li>
-                  <li className="navbar-main__item">
+                 {/*  <li className="navbar-main__item">
                     <NavLink onClick={this.closeMenu.bind(this)} to="/experiencias">Experiencias</NavLink>
-                  </li>
+                  </li> */}
                   <li className="navbar-main__item">
                     <NavLink onClick={this.closeMenu.bind(this)} to="/ofertas">Ofertas</NavLink>
                   </li>
